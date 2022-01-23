@@ -9,7 +9,18 @@ body {
 
 .clock {
   position: absolute;
-  top: 50%;
+  top: 30%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  color: #17D4FE;
+  font-size: 50px;
+  font-family: Orbitron;
+  letter-spacing: 7px;
+  font-weight: bold;
+}
+.prayertable {
+  position: absolute;
+  top: 70%;
   left: 50%;
   transform: translateX(-50%) translateY(-50%);
   color: #17D4FE;
@@ -22,4 +33,30 @@ body {
 h1 {
   font-size: 50px;
   text-align:center;
+}
+
+
+table.GeneratedTable {
+  width: 20%;
+  background-color: #000000;
+  border-collapse: collapse;
+  border-width: 2px;
+  border-color: #17D4FE;
+  border-style: solid;
+  color: #17D4FE;
+}
+
+table.GeneratedTable td, table.GeneratedTable th {
+  border-width: 5px;
+  border-color: #17D4FE;
+  text-align: center;
+  border-style: solid;
+  font-size: 40px;
+  padding: 3px;
+  padding-left:20px;
+  padding-right:20px;
+}
+
+table.GeneratedTable thead {
+  background-color: #000000;
 }

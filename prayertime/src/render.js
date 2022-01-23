@@ -14,8 +14,23 @@ function changeTimezone(date, ianatz) {
   
   }
 
-const clockitem = document.getElementById("MyClockDisplay");
+function getPrayerTime(){
+  //API used: https://prayertimes.date/api/docs/today
+  fetch('https://api.pray.zone/v2/times/today.json?city=toronto')
+  .then(response => response.json())
+  .then(data => {
+    document.getElementById("fajrtime").innerHTML = data.results.datetime[0].times.Fajr
+    document.getElementById("dhuhrtime").innerHTML = data.results.datetime[0].times.Dhuhr
+    document.getElementById("asrtime").innerHTML = data.results.datetime[0].times.Asr
+    document.getElementById("maghribtime").innerHTML = data.results.datetime[0].times.Maghrib
+    document.getElementById("ishatime").innerHTML = data.results.datetime[0].times.Isha
+  })
+  
+}
+getPrayerTime()
+
 function showTime(){
+
   var date = new Date();
   var local = changeTimezone(date, "America/Toronto");
   var h = local.getHours(); // 0 - 23
@@ -38,8 +53,10 @@ function showTime(){
   
   var time = h + ":" + m + ":" + s + " " + session;
   
-  document.getElementById("MyClockDisplay").innerText = time;
-  document.getElementById("MyClockDisplay").textContent = time;
+  //add feature to refresh every minute and not display seconds
+  //also fix css so that text resizes based on window size
+  document.getElementById("MyClockDisplay").innerText = "Local Time: " + time;
+  // document.getElementById("MyClockDisplay").textContent = time;
   
   setTimeout(showTime, 1000);
   
