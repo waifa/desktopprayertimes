@@ -10,11 +10,11 @@ Then run start the application via the `start` call.
 ```
 npm start
 ```
-#To Do
+# To Do
 * Get user's location for localized prayer times
 * Send prayer time notifications
 * Clean up UI
 
-#Extra Features
+# Extra Features
 * Azaan Sound Notification
 * Toolbar Integration
