@@ -1,14 +1,12 @@
 # desktopprayertimes
 An electron app that allows you to see the prayer times on your desktop.
 
-Run
+To run the app, first install electron.
 ```
 npm install electron
 ```
-inside of prayertime directory to setup.
 
-Then run
+Then run start the application via the `start` call.
 ```
 npm start
 ```
-to start the application.
